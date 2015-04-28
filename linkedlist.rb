@@ -4,4 +4,9 @@ class LinkedList
   def initialize
     @first = @last = nil
   end
+
+  def add(link)
+    @first ||= link
+    @last = link
+  end
 end

@@ -50,6 +50,11 @@ describe "linked list" do
       my_linked_list.add(my_link)
       expect(my_linked_list.first).to equal my_link
     end
+
+    it "adds link and sets it to last" do
+      my_linked_list.add(my_link)
+      expect(my_linked_list.last).to equal my_link
+    end
   end
 
 end
