@@ -3,10 +3,18 @@ require_relative 'link.rb'
 
 describe "link" do
   describe "#initialize" do
-    let(:my_link) {Link.new}
+    let(:my_link) {Link.new(7)}
 
     it "makes a new link" do
       expect(my_link).to be_an_instance_of Link
+    end
+
+    it "has a value" do
+      expect(my_link.value).to equal 7
+    end
+
+    it "has a default nil next" do
+      expect(my_link.next).to be nil
     end
   end
 end
