@@ -2,9 +2,9 @@ require_relative 'linkedlist.rb'
 require_relative 'link.rb'
 
 describe "link" do
-  describe "#initialize" do
-    let(:my_link) {Link.new(7)}
+  let(:my_link) {Link.new(7)}
 
+  describe "#initialize" do
     it "makes a new link" do
       expect(my_link).to be_an_instance_of Link
     end
@@ -15,6 +15,14 @@ describe "link" do
 
     it "has a default nil next" do
       expect(my_link.next).to be nil
+    end
+  end
+
+  describe "#next" do
+    let(:next_link) {Link.new("a")}
+    it "can set a next link" do
+      my_link.next = next_link
+      expect(my_link.next).to equal(next_link)
     end
   end
 end
