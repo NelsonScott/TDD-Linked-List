@@ -28,11 +28,28 @@ describe "link" do
 end
 
 describe "linked list" do
-  describe "#initialize" do
-    let(:my_linked_list) {LinkedList.new}
+  let(:my_linked_list) {LinkedList.new}
 
+  describe "#initialize" do
     it "makes a new linked list class" do
       expect(my_linked_list).to be_an_instance_of LinkedList
     end
+
+    it "has an empty first" do
+      expect(my_linked_list.first).to be nil
+    end
+
+    it "has an empty last" do
+      expect(my_linked_list.last).to be nil
+    end
   end
+
+  describe "#add" do
+    let(:my_link) {Link.new(39492)}
+    it "adds link and sets it to first" do
+      my_linked_list.add(my_link)
+      expect(my_linked_list.first).to equal my_link
+    end
+  end
+
 end
