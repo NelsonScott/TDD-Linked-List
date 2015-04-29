@@ -4,7 +4,7 @@ class LinkedList
   attr_reader :first
 
   def initialize
-    @first = nil
+    @first = Link.new(nil)
   end
 
   def add(data)
@@ -15,6 +15,6 @@ class LinkedList
     end
 
     new_link = Link.new(data)
-
+    current.next = new_link
   end
 end

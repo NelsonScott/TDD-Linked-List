@@ -9,8 +9,8 @@ describe "link" do
       expect(my_link).to be_an_instance_of Link
     end
 
-    it "has a value" do
-      expect(my_link.value).to equal 7
+    it "has data" do
+      expect(my_link.data).to equal 7
     end
 
     it "has a default nil next" do
@@ -36,13 +36,13 @@ describe "linked list" do
     end
 
     it "has an empty first" do
-      expect(my_linked_list.first).to be nil
+      expect(my_linked_list.first.data).to be nil
     end
   end
 
   describe "#add" do
     let(:my_link) {Link.new(39492)}
-    it "adds link and sets it to first" do
+    it "adds a link to the list" do
       my_linked_list.add(my_link)
       expect(my_linked_list.first).to equal my_link
     end
