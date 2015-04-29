@@ -18,10 +18,25 @@ class LinkedList
     current.next = new_link
   end
 
+  def insert(data, index)
+    i = 0
+    current = @first
+    while current.next && i < index
+      current = current.next
+      i+=1
+    end
+
+    next_link = current.next
+    current.next = Link.new(data)
+    if next_link
+      current.next.next = next_link
+    end
+  end
+
   def find(data)
     previous = find_previous(data)
 
-    prevous ? return previous.next : return previous
+    previous ? previous.next : previous
   end
 
   def find_previous(data)
@@ -39,6 +54,23 @@ class LinkedList
   end
 
   def remove(data)
+    previous = find_previous(data)
 
+    if previous
+      previous.next = previous.next.next
+    else
+      raise "not found."
+    end
+  end
+
+  def inspect
+    current = @first
+    results = []
+    while current.next
+      results << current.data
+      current = current.next
+    end
+
+    results
   end
 end

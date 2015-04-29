@@ -82,5 +82,22 @@ describe "linked list" do
       my_linked_list.remove(4)
       expect(my_linked_list.find(4)).to be nil
     end
+
+    it "raises an error if it can't be found" do
+      my_linked_list.add(4)
+      expect{my_linked_list.remove(5)}.to raise_error
+    end
+  end
+
+  describe "#insert" do
+    it "can insert into a ll at an index" do
+      index = 1
+      my_linked_list.add(2)
+      my_linked_list.add(4)
+      my_linked_list.insert(3, index)
+      p my_linked_list
+      expect(my_linked_list.find(2).next.data).to be 3
+      expect(my_linked_list.find(3).next.data).to be 4
+    end
   end
 end
