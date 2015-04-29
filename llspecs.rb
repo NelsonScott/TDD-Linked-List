@@ -41,10 +41,10 @@ describe "linked list" do
   end
 
   describe "#add" do
-    let(:my_link) {Link.new(39492)}
-    it "adds a link to the list" do
-      my_linked_list.add(my_link)
-      expect(my_linked_list.first.next).to equal my_link
+    let(:my_data) {39492}
+    it "adds data to the list" do
+      my_linked_list.add(my_data)
+      expect(my_linked_list.first.next.data).to equal my_data
     end
   end
 
