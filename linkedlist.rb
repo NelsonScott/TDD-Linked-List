@@ -1,3 +1,4 @@
+require_relative "link.rb"
 class LinkedList
   attr_reader :first
 
@@ -5,7 +6,13 @@ class LinkedList
     @first = nil
   end
 
-  def add(link)
+  def add(data)
     current = @first
+
+    while current.next
+      current = current.next
+    end
+
+    
   end
 end
