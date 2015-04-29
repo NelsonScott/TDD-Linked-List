@@ -1,9 +1,9 @@
 class Link
-  attr_reader :value
+  attr_reader :data
   attr_accessor :next
 
-  def initialize(value, next_link = nil)
-    @value = value
+  def initialize(data, next_link = nil)
+    @data = data
     @next = next_link
   end
 end

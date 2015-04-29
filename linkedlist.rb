@@ -1,4 +1,5 @@
 require_relative "link.rb"
+
 class LinkedList
   attr_reader :first
 
@@ -13,6 +14,7 @@ class LinkedList
       current = current.next
     end
 
-    
+    new_link = Link.new(data)
+
   end
 end
