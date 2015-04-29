@@ -95,7 +95,6 @@ describe "linked list" do
       my_linked_list.add(2)
       my_linked_list.add(4)
       my_linked_list.insert(3, index)
-      p my_linked_list
       expect(my_linked_list.find(2).next.data).to be 3
       expect(my_linked_list.find(3).next.data).to be 4
     end
