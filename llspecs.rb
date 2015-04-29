@@ -38,10 +38,6 @@ describe "linked list" do
     it "has an empty first" do
       expect(my_linked_list.first).to be nil
     end
-
-    it "has an empty last" do
-      expect(my_linked_list.last).to be nil
-    end
   end
 
   describe "#add" do
@@ -49,11 +45,6 @@ describe "linked list" do
     it "adds link and sets it to first" do
       my_linked_list.add(my_link)
       expect(my_linked_list.first).to equal my_link
-    end
-
-    it "adds link and sets it to last" do
-      my_linked_list.add(my_link)
-      expect(my_linked_list.last).to equal my_link
     end
   end
 

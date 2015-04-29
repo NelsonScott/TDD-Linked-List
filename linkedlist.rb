@@ -1,12 +1,11 @@
 class LinkedList
-  attr_reader :first, :last
+  attr_reader :first
 
   def initialize
-    @first = @last = nil
+    @first = nil
   end
 
   def add(link)
-    @first ||= link
-    @last = link
+    current = @first
   end
 end
