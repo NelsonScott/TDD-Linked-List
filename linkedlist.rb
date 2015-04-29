@@ -17,4 +17,5 @@ class LinkedList
     new_link = Link.new(data)
     current.next = new_link
   end
+  
 end
