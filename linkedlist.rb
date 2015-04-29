@@ -19,16 +19,26 @@ class LinkedList
   end
 
   def find(data)
+    previous = find_previous(data)
+
+    prevous ? return previous.next : return previous
+  end
+
+  def find_previous(data)
     current = @first
 
     while current.next
       if current.next.data == data
-        return current.next
+        return current
       else
         current = current.next
       end
     end
 
     nil
+  end
+
+  def remove(data)
+
   end
 end
