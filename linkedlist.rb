@@ -17,5 +17,18 @@ class LinkedList
     new_link = Link.new(data)
     current.next = new_link
   end
-  
+
+  def find(data)
+    current = @first
+
+    while current.next
+      if current.next.data == data
+        return current.next
+      else
+        current = current.next
+      end
+    end
+
+    nil
+  end
 end
